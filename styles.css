@@ -1,0 +1,137 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+@font-face{
+    font-family: "Figtree";
+    src:url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+body{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    margin: 0;
+    background-color:hsl(47, 88%, 63%);
+
+    
+}
+#container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex:1;
+    /* background-color:blue; */
+}
+#box{
+    background-color: white;
+    border: 1px solid black;
+    font-family:Figtree;
+    padding:24px;
+    flex-direction:column;
+    display:flex;
+    width: 384px;
+    box-sizing:border-box;
+    border-radius:20px;
+    box-shadow: 7px 7px 0 0 black;
+}
+#illustration{
+    border-radius: 1em;
+}
+h4{
+    background-color:hsl(47, 88%, 63%);
+    margin-top:1em;
+    padding:0.2em 0.8em;
+    align-self:flex-start;
+    border-radius:0.3rem;
+    font-weight:800;
+
+}
+#published{
+    color: hsl(0, 0%, 7%);
+    margin-top:1em;
+    font-size:0.8em;
+    font-weight:500;
+
+}
+#html{
+    font-size:1.5em;
+    margin-top:0.6em;
+    letter-spacing:0.1px;
+    font-weight:800;
+}
+#para{
+    font-weight:500;
+    margin-top:1em;
+    color:hsl(0, 0%, 42%);
+    font-size:16px;
+}
+#about{
+    displaY:flex;
+    align-items:center;
+    margin-top:1em;
+    gap:12px;
+}
+#avatar{
+    width:2em;
+    height:2em;
+}
+#name{
+    font-weight:800;
+    font-size:16px;
+}
+footer{
+    font-weight:800;
+}
+
